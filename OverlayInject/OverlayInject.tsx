@@ -1,3 +1,4 @@
+"use client";
 /* eslint-disable no-confusing-arrow -- disabled */
 /* eslint-disable @typescript-eslint/indent -- disabled */
 import React, { type PropsWithChildren, type ReactNode } from "react";

@@ -4,7 +4,7 @@
   "description": "Wrapper of react-bootstrap's OverlayTrigger component",
   "main": "index.ts",
   "scripts": {
-    "public": "npm public --access public",
+    "publish": "npm public --access public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

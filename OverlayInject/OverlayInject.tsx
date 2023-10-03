@@ -1,6 +1,4 @@
 "use client";
-/* eslint-disable no-confusing-arrow -- disabled */
-/* eslint-disable @typescript-eslint/indent -- disabled */
 import React, { type PropsWithChildren, type ReactNode } from "react";
 import { OverlayTrigger } from "react-bootstrap";
 import type { OverlayInjectedProps } from "react-bootstrap/esm/Overlay";
@@ -12,13 +10,49 @@ import type { Placement } from "react-bootstrap/esm/types";
 
 import { renderTooltip } from "./renderTooltip";
 
+/**
+ * The properties of the OverlayInject component
+ */
 type OverlayInjectProperties = {
+  /**
+   * The delay of the tooltip displaying/hiding, specified in React-Bootstrap's documentation of the `OverlayTrigger` component
+   * @see https://react-bootstrap.netlify.app/docs/components/overlays/#overlaytrigger-1
+   */
   readonly delay?: OverlayDelay;
+  /**
+   * Custom prop. Controls whether the tooltip displays while the user is hovering over it, and then disappears when the user's mouse loses focus
+   */
   readonly displayWhileHover?: boolean;
+  /**
+   * Fires when the tooltip toggles on/off
+   *
+   * @see https://react-bootstrap.netlify.app/docs/components/overlays/#overlaytrigger-1
+   *
+   * @param _nextShow - The next boolean value propagating to the state
+   * @returns Nothing, mutates the component state directly
+   */
   readonly onToggle?: (_nextShow: boolean) => void;
+  /**
+   * The placement of the tooltip, can be left/right/bottom/top
+   *
+   * @see https://react-bootstrap.netlify.app/docs/components/overlays/#overlaytrigger-1
+   */
   readonly placement?: Placement;
+  /**
+   * Controls whether the tooltip displays to the user, or renders in the DOM
+   *
+   * @see https://react-bootstrap.netlify.app/docs/components/overlays/#overlaytrigger-1
+   */
   readonly show?: boolean;
+  /**
+   * The content of the tooltip, can either be a string or a ReactNode, for more potential customization
+   */
   readonly title: string | ReactNode;
+  /**
+   * The type of trigger that causes the tooltip to display
+   *
+   * @see https://react-bootstrap.netlify.app/docs/components/overlays/#overlaytrigger-1
+   */
   readonly trigger?: OverlayTriggerType | OverlayTriggerType[];
 };
 
@@ -67,6 +101,7 @@ export const OverlayInject = ({
     setHoverShow(undefined);
   }, []);
 
+  // Returns the OverlayTrigger wrapper component
   return (
     <OverlayTrigger
       delay={delay}

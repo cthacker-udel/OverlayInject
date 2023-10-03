@@ -1,9 +1,10 @@
 {
   "name": "@cthacker/overlaytriggerinject",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Wrapper of react-bootstrap's OverlayTrigger component",
   "main": "index.ts",
   "scripts": {
+    "public": "npm public --access public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

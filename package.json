@@ -1,6 +1,6 @@
 {
   "name": "@cthacker/overlaytriggerinject",
-  "version": "1.4.0",
+  "version": "2.0.0",
   "description": "Wrapper of react-bootstrap's OverlayTrigger component",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",

@@ -101,20 +101,6 @@ export const OverlayInject = ({
     setHoverShow(undefined);
   }, []);
 
-  React.useEffect(() => {
-    if ((title as ReactNode) !== undefined) {
-      const element = title as unknown as HTMLElement;
-      if (element.getAttributeNode("onclick")) {
-        const callback = element.getAttributeNode("onclick");
-        if (callback !== null) {
-          console.log(
-            "setting callback, should hide overlay when element is clicked"
-          );
-        }
-      }
-    }
-  }, [title]);
-
   // Returns the OverlayTrigger wrapper component
   return (
     <OverlayTrigger

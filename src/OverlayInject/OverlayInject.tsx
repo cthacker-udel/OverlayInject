@@ -72,13 +72,13 @@ type OverlayInjectProperties = {
  * without having to implement the boilerplate
  *
  * @param props.children - The component being "wrapped" by the OverlayInject
- * @param props.titleClassName - The class name of the title, if supplied, overrides the title class name
  * @param props.delay - The delay to apply to the overlay
  * @param props.displayWhileHover - Controls whether the tooltip stays displayed while the user is hovering over the tooltip
  * @param props.onToggle - Fires when the visibility of the tooltip is changing (when the tooltip is toggled)
  * @param props.placement - (defaults to bottom) The placement of the Overlay
  * @param props.show - (defaults to undefined) Whether to show the overlay or not
  * @param props.title - The title of the overlay, aka the content
+ * @param props.titleClassName - The class name of the title, if supplied, overrides the title class name
  * @param props.trigger - How the tooltip is triggered, such as mouse hover, etc.
  */
 export const OverlayInject = ({
